@@ -7,6 +7,6 @@
 <title>Insert title here</title>
 </head>
 <body>
-変更しましたたた
+変更したよ
 </body>
 </html>
