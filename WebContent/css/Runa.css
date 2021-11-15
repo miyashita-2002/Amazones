@@ -1,0 +1,27 @@
+.menu {
+	list-style-type:none;
+	position: relative;
+	margin:0px 5px;
+	white-space: nowrap;
+}
+.menu a{
+	text-decoration:none;
+}
+.menu > li {
+	display:inline-block;
+	position:relative;
+	margin:0px 2rem;
+	text-align:center;
+}
+.menu > li > ul {
+	display:none;
+}
+.menu > li:hover ul {
+	display:block;
+	position:absolute;
+	padding:0;
+	margin:0;
+	top:1.5em;
+	left:0;
+	list-style-type:none;
+}
