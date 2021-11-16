@@ -1,4 +1,4 @@
-package servlet2;
+//package servlet2;
 
 import java.io.IOException;
 
@@ -24,11 +24,11 @@ public class AccountCheck extends HttpServlet {
 
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 
-        // ƒZƒbƒVƒ‡ƒ“‚©‚çƒƒOƒCƒ“î•ñ‚ğæ“¾
+        // ï¿½Zï¿½bï¿½Vï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½çƒï¿½Oï¿½Cï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½æ“¾
         HttpSession session = request.getSession();
         AccountBeans ab = (AccountBeans) session.getAttribute("account");
 
-        // ƒ[ƒ‹‚ÅƒtƒHƒ[ƒhæ‚ğU‚è•ª‚¯‚é
+        // ï¿½ï¿½ï¿½[ï¿½ï¿½ï¿½Åƒtï¿½Hï¿½ï¿½ï¿½[ï¿½hï¿½ï¿½ï¿½Uï¿½è•ªï¿½ï¿½ï¿½ï¿½
         if(ab.getRole() == 1) {
             RequestDispatcher rd = request.getRequestDispatcher("admin.jsp");
             rd.forward(request, response);

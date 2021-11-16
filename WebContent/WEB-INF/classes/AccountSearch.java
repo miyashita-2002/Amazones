@@ -1,4 +1,4 @@
-package servlet2;
+//package servlet2;
 
 import java.io.IOException;
 
@@ -32,18 +32,18 @@ public class AccountSearch extends HttpServlet {
         String loginId = request.getParameter("loginId");
         String pass = request.getParameter("pass");
 
-        // login.jsp‚©‚çó‚¯æ‚Á‚½ƒƒOƒCƒ“ID‚Æpass‚ğƒr[ƒ“ƒY‚ÉƒZƒbƒg
+        // login.jspï¿½ï¿½ï¿½ï¿½ó‚¯ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Oï¿½Cï¿½ï¿½IDï¿½ï¿½passï¿½ï¿½ï¿½rï¿½[ï¿½ï¿½ï¿½Yï¿½ÉƒZï¿½bï¿½g
         AccountBeans ab = new AccountBeans();
         ab.setLoginId(loginId);
         ab.setPass(pass);
 
-        // ƒAƒJƒEƒ“ƒg‚Ì—L–³‚ğŒŸõ
-        // ŒŸõ‚µ‚½ƒAƒJƒEƒ“ƒgî•ñ‚ğæ“¾
+        // ï¿½Aï¿½Jï¿½Eï¿½ï¿½ï¿½gï¿½Ì—Lï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
+        // ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Aï¿½Jï¿½Eï¿½ï¿½ï¿½gï¿½ï¿½ï¿½ï¿½ï¿½æ“¾
         AccountDAO ad = new AccountDAO();
         AccountBeans returnAb = ad.findAccount(ab);
 
         if(returnAb != null) {
-            // ƒZƒbƒVƒ‡ƒ“‚ÉƒAƒJƒEƒ“ƒgî•ñ•ƒ[ƒ‹‚ğ“o˜^
+            // ï¿½Zï¿½bï¿½Vï¿½ï¿½ï¿½ï¿½ï¿½ÉƒAï¿½Jï¿½Eï¿½ï¿½ï¿½gï¿½ï¿½ñ•ƒï¿½ï¿½[ï¿½ï¿½ï¿½ï¿½oï¿½^
             HttpSession session = request.getSession();
             session.setAttribute("account", returnAb);
 

@@ -1,4 +1,4 @@
-package servlet2;
+//package servlet2;
 
 import java.io.IOException;
 
@@ -32,17 +32,17 @@ public class AccountRegister extends HttpServlet {
         String pass = request.getParameter("pass");
         int role = Integer.parseInt(request.getParameter("role"));
 
-        // register.jsp‚©‚çó‚¯æ‚Á‚½’l‚ğƒr[ƒ“ƒY‚ÉƒZƒbƒg
+        // register.jspï¿½ï¿½ï¿½ï¿½ó‚¯ï¿½ï¿½ï¿½ï¿½ï¿½lï¿½ï¿½ï¿½rï¿½[ï¿½ï¿½ï¿½Yï¿½ÉƒZï¿½bï¿½g
         AccountBeans ab = new AccountBeans();
         ab.setName(name);
         ab.setLoginId(loginId);
         ab.setPass(pass);
         ab.setRole(role);
 
-        // ƒAƒJƒEƒ“ƒg‚ğDB‚É“o˜^
+        // ï¿½Aï¿½Jï¿½Eï¿½ï¿½ï¿½gï¿½ï¿½DBï¿½É“oï¿½^
         AccountRegisterDAO ard = new AccountRegisterDAO(ab);
 
-        // ƒZƒbƒVƒ‡ƒ“‚ÉƒAƒJƒEƒ“ƒgî•ñ‚ğ•Û‘¶
+        // ï¿½Zï¿½bï¿½Vï¿½ï¿½ï¿½ï¿½ï¿½ÉƒAï¿½Jï¿½Eï¿½ï¿½ï¿½gï¿½ï¿½ï¿½ï¿½Û‘ï¿½
         HttpSession session = request.getSession();
         session.setAttribute("account", ab);
 

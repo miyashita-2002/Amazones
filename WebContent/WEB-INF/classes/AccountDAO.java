@@ -1,4 +1,4 @@
-package dao;
+//package dao;
 
 import java.sql.Connection;
 import java.sql.DriverManager;
@@ -9,18 +9,18 @@ import java.sql.SQLException;
 import model.AccountBeans;
 
 public class AccountDAO {
-	// ƒf[ƒ^ƒx[ƒXÚ‘±‚Ég—p‚·‚éî•ñ
+	// ï¿½fï¿½[ï¿½^ï¿½xï¿½[ï¿½Xï¿½Ú‘ï¿½ï¿½Égï¿½pï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
     final String jdbcId = "info";
     final String jdbcPass = "pro";
     final String jdbcUrl = "jdbc:oracle:thin:@localhost:1521:orcl";
 
-    // ƒƒOƒCƒ“ƒAƒJƒEƒ“ƒg‚ğ’T‚·
+    // ï¿½ï¿½ï¿½Oï¿½Cï¿½ï¿½ï¿½Aï¿½Jï¿½Eï¿½ï¿½ï¿½gï¿½ï¿½Tï¿½ï¿½
     public AccountBeans findAccount(AccountBeans ab) {
 
-        // –ß‚è’l‚Ì—pˆÓ
+        // ï¿½ß‚ï¿½lï¿½Ì—pï¿½ï¿½
         AccountBeans returnAb = new AccountBeans();
 
-        // ƒf[ƒ^ƒx[ƒX‚ÖÚ‘±
+        // ï¿½fï¿½[ï¿½^ï¿½xï¿½[ï¿½Xï¿½ÖÚ‘ï¿½
         try (Connection con = DriverManager.getConnection(jdbcUrl, jdbcId, jdbcPass)) {
 
             String sql = "SELECT loginId, pass, name, roleId FROM account WHERE loginId = ? AND pass = ?";
@@ -33,13 +33,13 @@ public class AccountDAO {
 
 
             if (rs.next()) {
-                // Œ©‚Â‚©‚Á‚½ƒAƒJƒEƒ“ƒgî•ñ‚ğ–ß‚è’l‚ÉƒZƒbƒg
+                // ï¿½ï¿½ï¿½Â‚ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Aï¿½Jï¿½Eï¿½ï¿½ï¿½gï¿½ï¿½ï¿½ï¿½ß‚ï¿½lï¿½ÉƒZï¿½bï¿½g
                 returnAb.setLoginId(rs.getString("loginId"));
                 returnAb.setPass(rs.getString("pass"));
                 returnAb.setName(rs.getString("name"));
                 returnAb.setRole(rs.getInt("roleId"));
             } else {
-                // ƒAƒJƒEƒ“ƒg‚ª‚È‚¯‚ê‚Înull‚ğ•Ô‚·
+                // ï¿½Aï¿½Jï¿½Eï¿½ï¿½ï¿½gï¿½ï¿½ï¿½È‚ï¿½ï¿½ï¿½ï¿½nullï¿½ï¿½Ô‚ï¿½
                 return null;
             }
         } catch (SQLException e) {

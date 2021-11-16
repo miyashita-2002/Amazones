@@ -1,4 +1,4 @@
-package dao;
+//package dao;
 
 import java.sql.Connection;
 import java.sql.DriverManager;
@@ -8,7 +8,7 @@ import java.sql.SQLException;
 import model.AccountBeans;
 
 public class AccountRegisterDAO {
-    // ƒf[ƒ^ƒx[ƒXÚ‘±‚Ég—p‚·‚éî•ñ
+    // ï¿½fï¿½[ï¿½^ï¿½xï¿½[ï¿½Xï¿½Ú‘ï¿½ï¿½Égï¿½pï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
     final String jdbcId = "info";
     final String jdbcPass = "pro";
     final String jdbcUrl = "jdbc:oracle:thin:@localhost:1521:orcl";
@@ -28,9 +28,9 @@ public class AccountRegisterDAO {
             int r = ps.executeUpdate();
 
             if(r != 0) {
-                System.out.println("V‹K“o˜^¬Œ÷I");
+                System.out.println("ï¿½Vï¿½Kï¿½oï¿½^ï¿½ï¿½ï¿½ï¿½ï¿½I");
             } else {
-                System.out.println("V‹K“o˜^¸”s( É„D`)¼¸¼¸c");
+                System.out.println("ï¿½Vï¿½Kï¿½oï¿½^ï¿½ï¿½ï¿½s( É„D`)ï¿½ï¿½ï¿½ï¿½ï¿½c");
             }
 
         } catch (SQLException e) {
