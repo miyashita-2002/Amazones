@@ -1,3 +1,4 @@
+package login;
 //package dao;
 
 import java.sql.Connection;
@@ -5,7 +6,6 @@ import java.sql.DriverManager;
 import java.sql.PreparedStatement;
 import java.sql.SQLException;
 
-import model.AccountBeans;
 
 public class AccountRegisterDAO {
     // �f�[�^�x�[�X�ڑ��Ɏg�p������
