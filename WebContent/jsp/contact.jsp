@@ -7,8 +7,9 @@
 <title>お問い合わせフォーム</title>
 </head>
 <body>
-	<h1>お問い合わせフォーム</h1>
-	<h2>お問い合わせ内容</h2>
+
+<h1>お問い合わせフォーム</h1>
+<h2>お問い合わせ内容</h2>
 	<form method="POST" action="action">
 		お問い合わせの種類
 		<input type="radio" name="a" value="item">商品についてのお問い合わせ
@@ -18,7 +19,7 @@
 		お問い合わせ内容<br>
 		<textarea name="contents" cols="30" rows="10"></textarea><br>
 	</form>
-	<h2>お客様情報</h2>
+<h2>お客様情報</h2>
 	<form method="POST" action="action">
 		氏名<br>
 		性：<input type="text" name="family-name">
